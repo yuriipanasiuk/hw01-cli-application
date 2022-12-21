@@ -12,7 +12,7 @@ const listContacts = async () => {
 
 const getContactById = async contactId => {
   const contacts = await listContacts();
-  const getContact = contacts.filter(contact => contact.id === String(contactId));
+  const getContact = contacts.find(contact => contact.id === String(contactId));
 
   return getContact;
 };
